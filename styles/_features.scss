@@ -1,0 +1,46 @@
+.features {
+  align-items: center;
+  gap: calc(var(--default-padding) * 4);
+  padding-top: 15rem;
+  @include mobile() {
+    padding-top: 5rem;
+  }
+  .img img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include mobile() {
+      text-align: center;
+    }
+    h3 {
+      color: var(--color-very-dark-blue);
+      font-family: Rubik;
+      font-size: 3.5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 5rem;
+    }
+    p {
+      color: var(--color-grayish-blue2);
+      font-family: Rubik;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      li {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+    }
+  }
+}

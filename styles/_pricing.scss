@@ -1,0 +1,91 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    @include mobile() {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include tablet() {
+      gap: 2rem;
+    }
+    .plan {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border: 2px solid #ddd;
+      background: #fff;
+      padding: 5rem 0;
+      border-radius: 1rem;
+      -webkit-border-radius: 1rem;
+      -moz-border-radius: 1rem;
+      -ms-border-radius: 1rem;
+      -o-border-radius: 1rem;
+      .img {
+        display: flex;
+        justify-content: center;
+        object-fit: contain;
+      }
+      h4 {
+        margin-top: 3rem;
+        color: var(--color-very-dark-blue);
+        text-align: center;
+        font-family: Rubik;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 3rem; /* 166.667% */
+      }
+      ul {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        li {
+          display: flex;
+          gap: 2rem;
+          p {
+            color: var(--color-grayish-blue2);
+            font-family: Rubik;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem; /* 214.286% */
+          }
+        }
+      }
+      .select {
+        margin-top: 5rem;
+        p {
+          margin-bottom: 2rem;
+          color: var(--color-very-dark-blue);
+          text-align: center;
+          font-family: Rubik;
+          font-size: 2.5rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 3rem; /* 120% */
+          span {
+            color: var(--color-grayish-blue2);
+            font-family: Rubik;
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+.pricing .plan.active {
+  border: 0.2rem solid var(--color-medium-red);
+  .button2 {
+    background-color: var(--color-medium-red);
+    color: #fff;
+  }
+}

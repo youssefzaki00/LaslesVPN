@@ -1,0 +1,33 @@
+.network {
+  display: flex;
+  flex-direction: column;
+  gap: 15.5rem;
+  .img {
+    fill: #dde0e4;
+    opacity: 0.5;
+    width: 100%;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+  .brands {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    @include mobile() {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      img {
+        width: 10rem;
+      }
+    }
+    @include tablet() {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+  }
+}

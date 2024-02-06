@@ -1,0 +1,64 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  @include mobileAndtablet() {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .content {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    width: 55.5rem;
+    @include mobileAndtablet() {
+      width: fit-content;
+    }
+    h1 {
+      color: #0b132a;
+      font-family: Rubik;
+      font-size: 5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 7rem;
+
+      span {
+        color: #0b132a;
+        font-family: Rubik;
+        font-size: 5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 7rem;
+      }
+    }
+    p {
+      color: #4f5665;
+      font-family: Rubik;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3rem;
+      span {
+        color: #4f5665;
+        font-family: Rubik;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 3rem;
+      }
+    }
+    button {
+      align-self: flex-end;
+      margin-top: 3rem;
+    }
+  }
+  .img__holder {
+    img {
+      max-width: 100%;
+      object-fit: contain;
+      @include tablet() {
+        width: 0;
+      }
+    }
+  }
+}

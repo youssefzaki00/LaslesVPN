@@ -1,0 +1,58 @@
+.help {
+  padding-top: 18rem;
+  .about {
+    display: block;
+    p:first-of-type {
+      width: 34rem;
+      height: 6rem;
+      flex-shrink: 0;
+      margin: 2.5rem 0;
+      @include mobile() {
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+    p {
+      color: #4f5665;
+      font-family: Rubik;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3rem;
+    }
+    ul {
+      margin-left: -2rem;
+      display: flex;
+      align-items: start;
+      justify-content: flex-start;
+    }
+  }
+  .cols {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      li:first-child {
+        margin-bottom: 1rem;
+        color: var(--color-very-dark-blue);
+        font-family: Rubik;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 3rem;
+      }
+      li {
+        color: var(--color-grayish-blue2);
+        font-family: Rubik;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+      }
+    }
+  }
+}
